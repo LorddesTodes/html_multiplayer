@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Compatibility Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        #vr-message {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>VR Compatibility Check</h1>
+    <p id="vr-message">Checking VR support...</p>
+
+    <script>
+        function checkVRSupport() {
+            const message = document.getElementById("vr-message");
+
+            if ('xr' in navigator) {
+                navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+                    if (supported) {
+                        message.innerHTML = "✅ Your browser supports VR!";
+                        message.style.color = "limegreen";
+                        message.style.backgroundColor = "black";
+                    } else {
+                        message.innerHTML = "❌ Your browser does NOT support VR.";
+                        message.style.color = "red";
+                        message.style.backgroundColor = "black";
+                    }
+                }).catch(() => {
+                    message.innerHTML = "⚠️ Error checking VR support.";
+                    message.style.color = "orange";
+                    message.style.backgroundColor = "black";
+                });
+            } else {
+                message.innerHTML = "❌ WebXR is not available in your browser.";
+                message.style.color = "red";
+                message.style.backgroundColor = "black";
+            }
+        }
+
+        window.onload = checkVRSupport;
+    </script>
+
+</body>
+</html>
