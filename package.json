@@ -1,0 +1,20 @@
+{
+  "name": "html_multiplayer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "http": "^0.0.1-security",
+    "puppeteer": "^24.3.0",
+    "socket.io": "^4.8.1"
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mc</title>
+    <style rel="stylesheet" type="text/css" href="assets/style.css"></style>
+</head>
+<body>
+    <div class="ui" id="game-ui">
+        <div class="container" id="container">
+            <div class="icon-bar-layout">
+                <div class="icon-bar" id="icon-bar">
+                </div>
+            </div>
+        </div>
+        <div class="hotbar" id="hotbar">
+            <img src="./resources/textures/ui/hotbar.png" style="position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%);">
+        </div>
+        <img src="./resources/textures/ui/crossair.png" class="centered-image" style="position: fixed; left: 50%; bottom: 50%; transform: translateX(-50%); width: 60px; height: auto; opacity: 0.8;">
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="assets/main.js" type="module"></script>
+</body>
+</html>
